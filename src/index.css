@@ -55,7 +55,7 @@ ul {
 }
 
 .app-wrapper.hidden-side-bar {
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 100px 1fr;
 }
 
 .avatar {
