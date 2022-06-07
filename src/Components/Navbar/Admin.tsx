@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { useGlobalState } from '../../Provider/AppProvider';
 import { adminData } from '../../data/navbar';
 
