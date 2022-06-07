@@ -1,0 +1,29 @@
+.apps-submenu-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 38px;
+    padding: 16px 32px;
+}
+
+.apps-submenu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apps-submenu-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+.apps-submenu-text {
+    font-size: 14px;
+}

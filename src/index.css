@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red-deep: #f41127;
+  --red-light: #f52236;
+
+  --blue-deep: #1495ff;
+  --blue-light: 13, 202, 240;
+
+
+  --green-deep: #17a00e;
+  --green-light: #20a417;
+
+  --yellow-light: #ffc517;
+
+  --border-color: #cbccce;
+
+  --bg-main: #fff;
+  --bg-secondary: #f4f4f4;
+
+  --text-color: #4c5258;
+
+}
+
+.App.dark {
+  --bg-main: #171717;
+  --bg-secondary: #1e1e1e;
+  --text-color: #fff;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.app-wrapper.hidden-side-bar {
+  grid-template-columns: 70px 1fr;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+
+  min-width: 40px;
+  min-height: 40px;
+
+  border-radius: 50%;
+}
+
+.card {
+  background-color: var(--bg-main);
+  padding: 16px 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);   
+  border-radius: 8px;
+  color: var(--text-color);
+}
+
+.show-sidebar-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border: none;
+  outline: none;
+  background: var(--blue-deep);
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .app-wrapper,
+  .app-wrapper.hidden-side-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .3s, opacity .3s;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 5;
+  }
+
+  .overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .show-sidebar-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  body .md-full {
+    grid-column: 1 / 13;
+  }
+}

@@ -1,0 +1,30 @@
+.storage {
+    grid-column: 7 / 13;
+}
+
+.storage-item {
+    margin-bottom: 20px;
+}
+
+.storage-item-label {
+    display: inline-block;
+    font-weight: 300;
+    margin-bottom: 6px;
+}
+
+.storage-progress {
+    width: 100%;
+    height: 6px;
+    position: relative;
+    background: var(--bg-secondary);
+    border-radius: 30px;
+}
+
+.storage-progress-span {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 30px;
+    left: 0;
+    width: 50%;
+}

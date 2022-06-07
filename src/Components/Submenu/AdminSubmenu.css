@@ -1,0 +1,21 @@
+.admin-submenu-list {
+    padding: 8px 0;
+    min-width: 140px;
+}
+
+.admin-submenu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 16px;
+    transition: background .3s;
+    cursor: pointer;
+}
+
+.admin-submenu-item:hover {
+    background: var(--bg-secondary);
+}
+
+.admin-submenu-text {
+    font-weight: 300;
+}

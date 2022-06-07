@@ -1,0 +1,45 @@
+.statics-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.card-header,
+.card-footer {
+    color: var(--blue-deep);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-body {
+    width: 100%;
+    position: relative;
+    height: 4px;
+    margin: 16px 0;
+    border-radius: 30px;
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.card-body-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60%;
+    background: var(--blue-deep);
+}
+
+.card-footer {
+    color: var(--text-color);
+}
+
+.card-header-value {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-header-icon {
+    font-size: 24px;
+}

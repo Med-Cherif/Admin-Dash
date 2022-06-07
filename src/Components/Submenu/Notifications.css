@@ -1,0 +1,82 @@
+.notifications {
+    width: 350px;
+    padding: 16px 0;
+}
+
+.notifications-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px 16px;
+}
+
+.notifications-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mark-as-read-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+.notification-item {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.notification-item:hover {
+    background: var(--bg-secondary);
+}
+
+.notification-data {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.notification-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--green-light);
+    color: #fff;
+    font-size: 22px;
+}
+
+.notification-created-at {
+    font-size: 14px;
+}
+
+.notification-event {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.notification-message {
+    font-size: 14px;
+}
+
+.view-all {
+    border: none;
+    background: none;
+    overflow: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: auto;
+    padding-top: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}

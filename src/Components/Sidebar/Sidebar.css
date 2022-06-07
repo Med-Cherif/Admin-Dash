@@ -1,0 +1,223 @@
+.sidebar {
+    box-shadow: 1px 0 15px rgba(0, 0, 0, .2);
+    position: sticky;
+    height: 100vh;
+    top: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-bottom: .5px solid var(--border-color);
+    height: 65px;
+}
+
+.title {
+    color: var(--blue-deep);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.sidebar-title-icon {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue-deep);
+    cursor: pointer;
+}
+
+.sidebar.active .sidebar-title-icon {
+    transform: rotate(180deg);
+}
+
+.close-icon {
+    display: none;
+}
+
+.toggle-icon {
+    display: block;
+}
+
+.sidebar-list {
+    height: calc(100vh - 65px);
+    overflow: auto;
+    padding: 8px;
+}
+
+.sidebar-list::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+.sidebar-list ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+.sidebar-list::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.sidebar-item {
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.sidebar-item-link {
+    border-radius: 6px;
+    padding: 12px;
+    align-items: center;
+    display: flex;
+    transition: background .3s, color .3s;
+    cursor: pointer;
+    column-gap: 12px;
+    margin-bottom: 4px;
+}
+
+.sidebar-item-link.active {
+    color: var(--blue-deep);
+    background: rgba(var(--blue-light), .2);
+}
+
+
+.sidebar-item-link:hover {
+    color: var(--blue-deep);
+    background: rgba(var(--blue-light), .2);
+}
+
+.sidebar-item-icon {
+    font-size: 22px;
+}
+
+.sidebar-item-text {
+    font-weight: 300;
+}
+
+.arrow-icon {
+    display: inline-block;
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.sidebar-item.show-elements .arrow-icon {
+    transform: rotate(-90deg);
+}
+
+.sidebar-subitems-wrapper {
+    transition: height 0.3s;
+    height: 0;
+}
+
+.sidebar-sub-items {
+    flex: 1;
+    width: 100%;
+}
+
+.sidebar-subitem-item {
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-subitem-item:hover {
+    transition: background .3s, color .3s;
+    cursor: pointer;
+    color: var(--blue-deep);
+    background: rgba(var(--blue-light), .2);
+}
+
+.sidebar.active .sidebar-header,
+.sidebar.active .sidebar-item-link {
+    justify-content: center;
+}
+
+.sidebar.active .title,
+.sidebar.active .sidebar-item-text,
+.sidebar.active .arrow-icon,
+.sidebar.active .sidebar-subitems-wrapper {
+    display: none;
+}
+
+.switch-mode {
+    width: 80px;
+    height: 36px;
+    border-radius: 30px;
+    margin: auto;
+    background: var(--text-color);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.switch-mode-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 3px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bg-main);
+    cursor: pointer;
+    transition: transform .5s, left .5s;
+}
+
+.App.dark .switch-mode-btn {
+    left: calc(100% - 31px);
+    transform: translateY(-50%) rotate(360deg);
+}
+
+.switch-mode-btn > svg {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+@media (max-width: 1199px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        z-index: 10;
+        background: var(--bg-main);
+        transition: transform .3s;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .sidebar.active .title,
+    .sidebar.active .sidebar-item-text,
+    .sidebar.active .arrow-icon,
+    .sidebar.active .sidebar-subitems-wrapper {
+        display: block;
+    }
+
+    .sidebar.active .sidebar-item-link {
+        justify-content: flex-start;
+    }
+
+    .sidebar.active .sidebar-header {
+        justify-content: space-between;
+    }
+
+    .close-icon {
+        display: block;
+    }
+    
+    .toggle-icon {
+        display: none;
+    }
+}

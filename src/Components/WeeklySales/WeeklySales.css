@@ -1,0 +1,41 @@
+.weekly-sales {
+    grid-column: 9 / 13;
+}
+
+@media (max-width: 991px) {
+    .weekly-sales {
+        grid-column: 1 / 13;
+    }   
+}
+
+.custom-legend-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.custom-legend-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.custom-legend-left {
+    display: flex;
+}
+
+.custom-legend-item span {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.custom-legend-percentage {
+    display: inline-block;
+    justify-self: flex-end;
+}

@@ -1,0 +1,131 @@
+nav {
+    height: 65px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--bg-main);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .5px solid var(--border-color);
+    gap: 8px;
+}
+
+.input-search {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-search input {
+    border-radius: 4px;
+    background: var(--bg-secondary);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    height: 100%;
+    padding: 6px 16px;
+    width: 100%;
+}
+
+.input-search input:focus {
+    background: var(--bg-main);
+    box-shadow: 0 0 2px 2px rgba(var(--blue-light), .5);
+}
+
+.input-search input::placeholder {
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.admin-section {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    min-height: 100%;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.admin-name {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.admin-position {
+    font-weight: 500;
+    color: gray;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+    display: inline-block;
+    height: 65px;
+    width: 1px;
+    background-color: var(--border-color);
+    margin: 0 24px;
+}
+
+.navbar-right-list {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-item {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-item-icon {
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+.navbar-item-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    background-color: var(--red-deep);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+    nav {
+        justify-content: center;
+        padding: 0 1rem;
+    }
+    .input-search {
+        display: none;
+    }
+    .vertical-line {
+        margin: 0 16px;
+    }
+    .navbar-right-list {
+        gap: 12px;
+    }
+}

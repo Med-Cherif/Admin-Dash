@@ -1,0 +1,37 @@
+.social-static-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-static-item-1 {
+    grid-column: 1 / 5;
+}
+
+.social-static-item-2 {
+    grid-column: 5 / 9;
+}
+
+.social-static-item-3 {
+    grid-column: 9 / 13;
+}
+
+.social-static-item-left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.social-static-item-icon {
+    font-size: 2rem;
+}
+
+.social-static-item-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-static-item-increasing {
+    font-size: 14px;
+    font-weight: 300;
+}

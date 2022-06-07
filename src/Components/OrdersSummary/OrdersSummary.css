@@ -1,0 +1,63 @@
+.orders-summary {
+    grid-column: 1 / 13;
+    overflow: auto;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.table-head {
+    margin-top: 25px;
+}
+
+.orders-summary-table, .table-head {
+    width: 100%;
+    min-width: 800px;
+}
+
+.order, .table-head {
+    display: grid;
+    grid-template-columns: 1fr 2.8fr 1.5fr 1fr .8fr 1fr;
+    gap: 16px;
+}
+
+.table-head {
+    padding: 8px;
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid #000;
+}
+
+.table-head-title {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.order {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.status {
+    background: var(--blue-deep);
+    color: #fff;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.status.Completed {
+    background: var(--green-light);
+}
+.status.Canceled {
+    background: var(--red-light);
+}
+.product-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
